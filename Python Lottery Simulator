@@ -1,0 +1,11 @@
+def luck_six():
+    available_nums = list(range(1, 60))
+    tickets = []
+    for x in range(6):
+        picked_num = random.choice(available_nums)
+        tickets.append(picked_num)
+        available_nums.remove(picked_num)
+    return sorted(tickets)
+    
+my_tickets = luck_six()
+print(my_tickets)
